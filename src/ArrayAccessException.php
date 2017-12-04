@@ -16,67 +16,18 @@
 //
 // Author:   Joan Fabrégat <joan@codeinc.fr>
 // Date:     04/12/2017
-// Time:     15:55
-// Project:  lib-codeinclib
+// Time:     18:28
+// Project:  lib-arrayaccess
 //
 namespace CodeInc\ArrayAccess;
 
 
 /**
- * Trait ArrayAccessTrait
+ * Class ArrayAccessException
  *
  * @package CodeInc\ArrayAccess
  * @author Joan Fabrégat <joan@codeinc.fr>
  */
-trait ArrayAccessTrait {
-	/**
-	 * Returns a pointer to the array accessible via \ArrayAccess.
-	 *
-	 * @return array
-	 */
-	abstract protected function &getAccessibleArray():array;
+class ArrayAccessException extends \Exception {
 
-	/**
-	 * ArrayAccess method.
-	 *
-	 * @param mixed $offset
-	 * @param mixed $value
-	 */
-	public function offsetSet($offset, $value) {
-		if ($offset === null) {
-			$this->getAccessibleArray()[] = $value;
-		}
-		else {
-			$this->getAccessibleArray()[$offset] = $value;
-		}
-	}
-
-	/**
-	 * ArrayAccess method.
-	 *
-	 * @param mixed $offset
-	 * @return bool
-	 */
-	public function offsetExists($offset):bool {
-		return array_key_exists($offset, $this->getAccessibleArray());
-	}
-
-	/**
-	 * ArrayAccess method.
-	 *
-	 * @param mixed $offset
-	 */
-	public function offsetUnset($offset) {
-		unset($this->getAccessibleArray()[$offset]);
-	}
-
-	/**
-	 * ArrayAccess method.
-	 *
-	 * @param mixed $offset
-	 * @return mixed|null
-	 */
-	public function offsetGet($offset) {
-		return $this->offsetExists($offset) ? $this->getAccessibleArray()[$offset] : null;
-	}
 }
