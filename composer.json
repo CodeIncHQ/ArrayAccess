@@ -1,7 +1,7 @@
 {
   "name": "codeinc/array-access",
   "version": "1.2.0",
-  "description": "Code Inc.'s ArrayAccess library",
+  "description": "ArrayAccess library",
   "homepage": "https://github.com/CodeIncHQ/ArrayAccess",
   "type": "library",
   "license": "MIT",
