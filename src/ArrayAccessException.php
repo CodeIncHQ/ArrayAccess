@@ -17,7 +17,7 @@
 // Author:   Joan Fabrégat <joan@codeinc.fr>
 // Date:     04/12/2017
 // Time:     18:28
-// Project:  lib-arrayaccess
+// Project:  ArrayAccess
 //
 namespace CodeInc\ArrayAccess;
 

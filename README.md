@@ -1,4 +1,4 @@
-# Code Inc.'s ArrayAccess library
+# ArrayAccess library
 
 ## Usage
 
@@ -34,3 +34,15 @@ class MyArrayAccesssibleClass2 extends AbstractArrayAccess {
 $arrayAccessible = new ArrayAccess([1 =>  "One", 2 => "Two", 3 => "Three"]);
 echo $arrayAccessible[2]; // echoes "Two"
 ```
+
+
+## Installation
+This library is available through [Packagist](https://packagist.org/packages/codeinc/array-access) and can be installed using [Composer](https://getcomposer.org/): 
+
+```bash
+composer require codeinc/array-access
+```
+
+## License
+
+The library is published under the MIT license (see [`LICENSE`](LICENSE) file).
